@@ -24,8 +24,8 @@
           <a class="brand" href=".">MiniBookStore 迷你书城</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="about.jsp">About</a></li>
+              <li><a href=".">Home</a></li>
+              <li class="active"><a href="#about">About</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
