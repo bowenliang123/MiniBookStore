@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -43,7 +44,7 @@
       <h4>前段运用的技术包括：BootStrap、jQuery</h4>
 
     </div>
-    
+    <p><a href="<s:url action='hello'/>">Hello World</a></p>
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
