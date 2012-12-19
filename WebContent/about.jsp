@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap 101 Template</title>
+    <title>About</title>
     <!-- Bootstrap -->
     <style>
       body {
@@ -25,7 +25,7 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href=".">Home</a></li>
-              <li class="active"><a href="#about">About</a></li>
+              <li class="active"><a href="about.jsp">About</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -44,7 +44,7 @@
 
     </div>
     
-    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-1.8.3.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
