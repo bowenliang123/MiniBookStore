@@ -27,17 +27,18 @@ public class Register extends ActionSupport {
 		// call Service class to store personBean's state in database
 		request = ServletActionContext.getRequest();
 		response = ServletActionContext.getResponse();
-		System.out.println(accountBean);
 
 		Configuration conf = new Configuration().configure();
 		SessionFactory sf = conf.buildSessionFactory();
 		Session sess = sf.openSession();
 		Transaction tx = sess.beginTransaction();
-		Account a = (Account) sess.load(Account.class, accountBean.getNickName());
-		if (a!=null){
-			addFieldError( "accountBean.nickName", "无法注册，系统已有相同ID，请修改。");
+		Account a = (Account) sess
+				.get(Account.class, accountBean.getNickName());
+		if (a != null) {
+			addFieldError("accountBean.nickName", "无法注册，系统已有相同ID，请修改。");
 			return INPUT;
 		}
+		accountBean.setRole("member");
 		sess.save(accountBean);
 		tx.commit();
 		sess.close();
@@ -47,12 +48,12 @@ public class Register extends ActionSupport {
 	}
 
 	@Override
-	public void validate(){
-		if (accountBean.getRole().equals("4")){
+	public void validate() {
+		if (accountBean.getRole().equals("4")) {
 			this.addFieldError("accountBean.role", "4??");
 		}
 	}
-	
+
 	public Account getAccountBean() {
 
 		return accountBean;

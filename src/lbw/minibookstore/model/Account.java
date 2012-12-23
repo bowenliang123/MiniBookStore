@@ -1,6 +1,7 @@
 package lbw.minibookstore.model;
 
 public class Account {
+	private String id;
 	private String nickName;
 	private String password;
 	private String gender;

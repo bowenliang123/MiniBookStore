@@ -48,10 +48,11 @@ body {
 }
 </style>
 <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
+body {
+	padding-top: 60px;
+	/* 60px to make the container go all the way to the bottom of the topbar */
+}
+</style>
 
 <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 <!--[if lt IE 9]>
@@ -96,19 +97,17 @@ body {
 			<h2 class="form-signin-heading">
 				欢迎登录！<br>Please sign in
 			</h2>
-			<br><br>
-			<input type="text" name="account" class="input-block-level"
-				placeholder="Account 账号：" /> <input type="password" name="password"
+			<br>
+			<br> <input type="text" name="account" class="input-block-level"
+				placeholder="Account 账号：" />
+				<input type="password" name="password"
 				class="input-block-level" placeholder="Password 密码：" />
-			<!-- <label
-				class="checkbox"> <input type="checkbox" value="remember-me">
-				Remember me 
-			</label> -->
-			<br><br>
-			<a href="register.jsp"><button class="btn btn-large btn-primary" type="button">Register注册</button></a>
+			<br>
+			<br> <a href="register.jsp"><button
+					class="btn btn-large btn-primary" type="button">Register注册</button></a>
 			<button class="btn btn-large btn-success" type="submit">SignIn登录</button>
 		</form>
-		
+
 
 	</div>
 	<!-- /container -->

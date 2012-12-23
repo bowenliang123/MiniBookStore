@@ -102,8 +102,8 @@ body {
 
 				<s:textfield name="accountBean.nickName" label="nickName" />
 				<s:textfield name="accountBean.password" label="password" />
-				<s:textfield name="accountBean.gender" label="gender" />
-				<s:textfield name="accountBean.role" label="role" />
+				<s:radio name="accountBean.gender" label="gender"
+list="#{'1':'Male','0':'Female'}" value="1"/>
 
 				<s:submit />
 

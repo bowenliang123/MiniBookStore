@@ -8,5 +8,6 @@
   <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/minibookstore</property>
   <property name="hibernate.connection.username">root</property>
   <mapping class="lbw.minibookstore.model.Account" resource="lbw/minibookstore/model/Account.hbm.xml"/>
+  <mapping class="lbw.minibookstore.model.Book" resource="lbw/minibookstore/model/Book.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>

@@ -1,7 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
-<title>Welcome to MiniBookStore!</title>
+<title>Account List</title>
 <!-- Bootstrap -->
 <style>
 body {
@@ -10,8 +13,6 @@ body {
 }
 </style>
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"
-	media="screen">
-<link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"
 	media="screen">
 </head>
 <body>
@@ -24,16 +25,9 @@ body {
 				</a> <a class="brand" href=".">MiniBookStore 迷你书城</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li class="active"><a href=".">Home</a></li>
+						<li><a href=".">Home</a></li>
 						<li><a href="about.jsp">About</a></li>
 					</ul>
-
-					<div class="btn-group pull-right">
-						<a class="btn btn-success" type="button" href="./signin.jsp">Sign
-							In 登录</a>
-						<a href="register.jsp"><button class="btn btn-primary" type="button">Register
-							Now 马上注册</button></a>
-					</div>
 				</div>
 				<!--/.nav-collapse -->
 			</div>
@@ -42,13 +36,17 @@ body {
 
 	<div class="container">
 
-		<h1>Welcome to MiniBookStore!</h1>
-		<h1>欢迎来到迷你书城！</h1>
-		<br> <br> <br>
-		<h3>作者：梁博文 Dec2012</h3>
-		<br>
-		<h4>后端运用的技术包括：Struts2、Hibernate4、Spring3</h4>
-		<h4>前段运用的技术包括：BootStrap、jQuery</h4>
+		<h1>Account List</h1>
+		<table class="table">
+			<tr><td>昵称</td><td>性别</td><td>角色</td></tr>
+			<s:iterator value="accountList" id="account">
+				<tr>
+					<td><s:property value="#account.nickName" /></td>
+					<td><s:property value="#account.gender" /></td>
+					<td><s:property value="#account.role" /></td>
+				</tr>
+			</s:iterator>
+		</table>
 
 	</div>
 

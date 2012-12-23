@@ -14,6 +14,9 @@ public class GateCheckAction extends ActionSupport {
 	HttpServletRequest request;
 	HttpServletResponse response;
 
+	private String role;
+	private String userName;
+
 	public static final String NOT_SIGNED_IN = "notSignedIn";
 	public static final String ROLE_ADMIN = "admin";
 	public static final String ROLE_USER = "user";
@@ -26,16 +29,18 @@ public class GateCheckAction extends ActionSupport {
 		request = ServletActionContext.getRequest();
 		HashMap<String, String> cookiesMap = parseCookiesToMap(request
 				.getCookies());
-		if (!cookiesMap.containsKey("role"))
+		setRole(cookiesMap.get("role"));
+		setUserName(cookiesMap.get("userName"));
+		if (this.role == null)
 			return NOT_SIGNED_IN;
 		else {
 			switch (cookiesMap.get("role")) {
 			case ROLE_ADMIN:
 				return ROLE_ADMIN;
-				
+
 			case ROLE_USER:
 				return ROLE_USER;
-				
+
 			case ROLE_MEMBER:
 				return ROLE_MEMBER;
 
@@ -52,5 +57,21 @@ public class GateCheckAction extends ActionSupport {
 			hm.put(cookie.getName(), cookie.getValue());
 		}
 		return hm;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 }
