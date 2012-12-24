@@ -18,10 +18,21 @@ body {
 <body>
 	<s:include value="topbanner.jsp"></s:include>
 
-	<div class="container">
-
-		<h1>未知标题页面</h1>
-
+	<div class="container-fluid">
+		<div class="span3">
+			<s:include value="member_nav_left.jsp"></s:include>
+		</div>
+		<!--/span-->
+		<div class="span9">
+			<p>viewProfile_member</p>
+			<br>
+			
+			<table class="table">
+			<tr><td>账号：</td><td><s:property value="account.nickName" /></td></tr>
+			<tr><td>权限：</td><td><s:property value="account.role" /></td></tr>
+			<tr><td>性别：</td><td><s:property value="account.gender" /></td></tr>
+			</table>
+		</div>
 
 	</div>
 

@@ -39,6 +39,12 @@ public class Register extends ActionSupport {
 			return INPUT;
 		}
 		accountBean.setRole("member");
+		if (accountBean.getGender().equals("1")){
+			accountBean.setGender("Male");
+		}else
+		{
+			accountBean.setGender("Female");
+		}
 		sess.save(accountBean);
 		tx.commit();
 		sess.close();

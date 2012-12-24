@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,8 +42,10 @@ body {
 			</div>
 		</div>
 	</div>
+	
 
 	<div class="container">
+	<s:action name="booklist"></s:action>
 
 		<h1>Welcome to MiniBookStore!</h1>
 		<h1>欢迎来到迷你书城！</h1>

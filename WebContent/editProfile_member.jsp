@@ -18,10 +18,25 @@ body {
 <body>
 	<s:include value="topbanner.jsp"></s:include>
 
-	<div class="container">
+	<div class="container-fluid">
+		<div class="span3">
+			<s:include value="member_nav_left.jsp"></s:include>
+		</div>
+		<!--/span-->
+		<div class="span9">
+			<p>editProfile_member</p>
+			<br>
+			<s:form action="editMemberProfile">
 
-		<h1>未知标题页面</h1>
+				<s:textfield name="account.nickName" label="nickName" text="account.nickName" />
+				<s:textfield name="account.password" label="password" text="account.password"/>
+				<s:radio name="account.gender" label="gender"
+					list="#{'1':'Male','0':'Female'}" value="account.gender" />
 
+				<s:submit />
+
+			</s:form>
+		</div>
 
 	</div>
 

@@ -16,17 +16,17 @@ public class BookListAction extends ActionSupport {
 	private List<Account> bookList;
 
 	@Override
-	public String execute(){
+	public String execute() {
 		setBookList(generateBookList());
 		return SUCCESS;
 	}
-	
-	public List generateBookList(){
+
+	public List generateBookList() {
 		Configuration conf = new Configuration().configure();
 		SessionFactory sf = conf.buildSessionFactory();
 		Session sess = sf.openSession();
 		Transaction tx = sess.beginTransaction();
-		bookList =  sess.createQuery("from Book").list();
+		bookList = sess.createQuery("from Book").list();
 		tx.commit();
 		sess.close();
 		sf.close();
@@ -41,6 +41,4 @@ public class BookListAction extends ActionSupport {
 		this.bookList = bookList;
 	}
 
-	
-	
 }

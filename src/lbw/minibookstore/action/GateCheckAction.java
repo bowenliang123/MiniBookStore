@@ -30,7 +30,7 @@ public class GateCheckAction extends ActionSupport {
 		HashMap<String, String> cookiesMap = parseCookiesToMap(request
 				.getCookies());
 		setRole(cookiesMap.get("role"));
-		setUserName(cookiesMap.get("userName"));
+		setUserName(cookiesMap.get("account"));
 		if (this.role == null)
 			return NOT_SIGNED_IN;
 		else {

@@ -19,7 +19,7 @@
 body {
 	padding-top: 40px;
 	padding-bottom: 40px;
-	background-color: #f5f5f5;
+	/* background-color: #f5f5f5; */
 }
 
 .form-signin {
@@ -72,26 +72,25 @@ body {
 </head>
 
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="btn btn-navbar" data-toggle="collapse"
-					data-target=".nav-collapse"> <span class="icon-bar"></span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span>
-				</a> <a class="brand" href=".">MiniBookStore 迷你书城</a>
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<li><a href=".">Home</a></li>
-						<li><a href="about.jsp">About</a></li>
-					</ul>
-				</div>
-				<!--/.nav-collapse -->
+	<s:include value="topbanner.jsp"></s:include>
+
+
+	<div class="container-fluid">
+		<div class="span3">
+			<div class="well sidebar-nav">
+				<ul class="nav nav-list">
+					<li class="nav-header">Sidebar</li>
+					<li class="active"><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li><a href="#">Link</a></li>
+					<li class="nav-header">Sidebar</li>
+					<li><a href="#">Link</a></li>
+				</ul>
 			</div>
+			<!--/.well -->
 		</div>
-	</div>
-
-
-	<div class="container">
+		<!--/span-->
 
 		<form class="form-signin" action="register" method="post">
 			<h2 class="form-signin-heading">
@@ -103,17 +102,16 @@ body {
 				<s:textfield name="accountBean.nickName" label="nickName" />
 				<s:textfield name="accountBean.password" label="password" />
 				<s:radio name="accountBean.gender" label="gender"
-list="#{'1':'Male','0':'Female'}" value="1"/>
+					list="#{'1':'Male','0':'Female'}" value="1" />
 
 				<s:submit />
 
 			</s:form>
 		</form>
-
-
-
+		<s:include value="test.html" />
 	</div>
 	<!-- /container -->
+
 
 	<!-- Le javascript
     ================================================== -->
