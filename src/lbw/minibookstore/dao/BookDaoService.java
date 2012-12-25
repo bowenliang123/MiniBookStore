@@ -9,8 +9,4 @@ import lbw.minibookstore.model.FullOrder;
 public interface BookDaoService {
 
 	Book getBookInfoById(int bookId);
-
-	void makeOrder(String accountName, int bookId, int bookCount);
-	
-	List<FullOrder> viewOrder(String accountName);
 }

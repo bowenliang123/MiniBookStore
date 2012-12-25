@@ -5,6 +5,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 
 import lbw.minibookstore.dao.BookDaoService;
+import lbw.minibookstore.dao.OrderDaoService;
 import lbw.minibookstore.model.Book;
 import lbw.minibookstore.model.BookOrder;
 import lbw.minibookstore.model.FullOrder;
@@ -30,6 +31,7 @@ public class OrderAction extends ActionSupport {
 	
 	ApplicationContext ctx;
 	BookDaoService bookDao;
+	OrderDaoService orderDao;
 
 	public String preview() {
 		init();
@@ -40,20 +42,21 @@ public class OrderAction extends ActionSupport {
 	public String make() {
 		init();
 		String accountName = Utils.getAccountnameFromCookies(request);
-		bookDao.makeOrder(accountName,bookId,bookCount);
+		orderDao.makeOrder(accountName,bookId,bookCount);
 		return Action.SUCCESS;
 	}
 	
 	public String view(){
 		init();
 		String accountName = Utils.getAccountnameFromCookies(request);
-		orderList = bookDao.viewOrder(accountName);		
+		orderList = orderDao.viewOrder(accountName);		
 		return Action.SUCCESS;
 	}
 	
 	public void init(){
 		ctx = new ClassPathXmlApplicationContext("bean.xml");
 		bookDao = ctx.getBean("bookDao", BookDaoService.class);
+		orderDao = ctx.getBean("orderDao", OrderDaoService.class);
 		request = ServletActionContext.getRequest();
 	}
 

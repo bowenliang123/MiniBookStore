@@ -22,30 +22,30 @@
 			<result name="member" type="redirect">/index_member.jsp</result>
 			<result name="error">/signin_error.jsp</result>
 		</action>
-		
-		<action name="accountlist"
-			class="lbw.minibookstore.action.AccountListAction" method="execute">
+
+		<action name="accountlist" class="lbw.minibookstore.action.AccountListAction"
+			method="execute">
 			<result name="success">/accountlist.jsp</result>
 		</action>
-		
-		<action name="booklist"
-			class="lbw.minibookstore.action.BookListAction" method="execute">
+
+		<action name="booklist" class="lbw.minibookstore.action.BookListAction"
+			method="execute">
 			<result name="success">/book_list.jsp</result>
 		</action>
-		
-		<action name="getUsername"
-			class="lbw.minibookstore.action.GetUserNameAction" method="execute">
+
+		<action name="getUsername" class="lbw.minibookstore.action.GetUserNameAction"
+			method="execute">
 			<result name="success">/username_tip.jsp</result>
 		</action>
-		
+
 
 		<action name="register" class="lbw.minibookstore.action.Register"
 			method="execute">
 			<result name="success">/</result>
 			<result name="input">/register.jsp</result>
 		</action>
-		
-		<!-- Profile, Member  -->
+
+		<!-- Profile, Member -->
 		<action name="viewMemberProfile" class="lbw.minibookstore.action.MemberProfileAction"
 			method="view">
 			<result name="success">/viewProfile_member.jsp</result>
@@ -58,24 +58,24 @@
 			method="edit">
 			<result name="success" type="redirect">/viewMemberProfile.action</result>
 		</action>
-		
+
 		<!-- Book, Member -->
-		<action name="viewBooklist"
-			class="lbw.minibookstore.action.BookListAction" method="execute">
+		<action name="viewBooklist" class="lbw.minibookstore.action.BookListAction"
+			method="execute">
 			<result name="success">/member_viewbooklist.jsp</result>
 		</action>
-		
+
 		<!-- Order, Member -->
-		<action name="previewOrder"
-			class="lbw.minibookstore.action.OrderAction" method="preview">
+		<action name="previewOrder" class="lbw.minibookstore.action.OrderAction"
+			method="preview">
 			<result name="success">/member_previeworder.jsp</result>
 		</action>
-		<action name="makeOrder"
-			class="lbw.minibookstore.action.OrderAction" method="make">
+		<action name="makeOrder" class="lbw.minibookstore.action.OrderAction"
+			method="make">
 			<result name="success">/member_successorder.jsp</result>
 		</action>
-		<action name="viewOrder"
-			class="lbw.minibookstore.action.OrderAction" method="view">
+		<action name="viewOrder" class="lbw.minibookstore.action.OrderAction"
+			method="view">
 			<result name="success">/member_vieworder.jsp</result>
 		</action>
 

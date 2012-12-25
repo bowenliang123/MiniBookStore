@@ -1,35 +1,33 @@
 package lbw.minibookstore.dao.impl;
 
-import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import lbw.minibookstore.dao.BookDaoService;
+import lbw.minibookstore.dao.AccountDaoService;
 import lbw.minibookstore.model.Account;
 import lbw.minibookstore.model.Book;
-import lbw.minibookstore.model.BookOrder;
-import lbw.minibookstore.model.FullOrder;
 
-public class BookDaoImpl implements BookDaoService {
+public class AccountDaoImpl implements AccountDaoService {
 
 	@Override
-	public Book getBookInfoById(int bookId) {
+	public String valiadAccountByNamePassWord(String accountName,
+			String password) {
 		// TODO Auto-generated method stub
+		String result="error";
 		
 		Configuration conf = new Configuration().configure();
 		SessionFactory sf = conf.buildSessionFactory();
 		Session sess = sf.openSession();
 		Transaction tx = sess.beginTransaction();
-		Book book = (Book) sess.get(Book.class, bookId);
+		Account account = (Account)sess.get(Account.class, accountName);
+		if (account!=null && account.getPassword().equals(password)){
+			result = account.getRole();
+		}
 		tx.commit();
 		sess.close();
-		
-		return book;
+		return result;
 	}
-
-	
 
 }

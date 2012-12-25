@@ -13,8 +13,13 @@
 		<li><a href="#"></a></li>
 		
 		<li class="nav-header">订单信息</li>
-		<li><s:a action="viewOrder">查看我的订单</s:a></li>
+		<li><s:a action="viewOrder">付款/查看我的订单</s:a></li>
 		<li><a href="#"></a></li>
+		
+		<li class="nav-header">离开书城</li>
+		<li><s:a action="signOut">登出</s:a></li>
+		<li><a href="#"></a></li>
+		
 		
 	</ul>
 </div>

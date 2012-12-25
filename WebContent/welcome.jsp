@@ -33,19 +33,18 @@ body {
 
 					<div class="btn-group pull-right">
 						<a class="btn btn-success" type="button" href="./signin.jsp">Sign
-							In 登录</a>
-						<a href="register.jsp"><button class="btn btn-primary" type="button">Register
-							Now 马上注册</button></a>
+							In 登录</a> <a href="register.jsp"><button class="btn btn-primary"
+								type="button">Register Now 马上注册</button></a>
 					</div>
 				</div>
 				<!--/.nav-collapse -->
 			</div>
 		</div>
 	</div>
-	
+
 
 	<div class="container">
-	<s:action name="booklist"></s:action>
+		<s:action name="booklist"></s:action>
 
 		<h1>Welcome to MiniBookStore!</h1>
 		<h1>欢迎来到迷你书城！</h1>
@@ -55,7 +54,9 @@ body {
 		<h4>后端运用的技术包括：Struts2、Hibernate4、Spring3</h4>
 		<h4>前段运用的技术包括：BootStrap、jQuery</h4>
 
+		<s:include value="footer_info.jsp"></s:include>
 	</div>
+
 
 	<script src="js/jquery-1.8.3.js"></script>
 	<script src="bootstrap/js/bootstrap.min.js"></script>

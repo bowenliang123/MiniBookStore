@@ -25,19 +25,29 @@ body {
 		<!--/span-->
 		<div class="span9">
 			<p>viewOrder</p>
+			<h3>你的订单</h3>
 			<br>
 			
 			<table class="table table-striped">
 			<tr>
+			<td>订单号</td>
+			<td>书名</td>
+			<td>订购数量</td>
+			<td>出版社</td>
+			<td>总价</td>
+			<td>是否已付款</td>
 			</tr>
 			<s:iterator value="orderList" id="book">
 				<tr>
 					<td><s:property value="#book.id"/></td>
 					<td><s:property value="#book.name" /></td>
+					<td><s:property value="#book.count" /></td>
 					<td><s:property value="#book.press" /></td>
-					<td><s:property value="#book.description" /></td>
-					<td><s:property value="#book.price" /></td>
+					<td><s:property value="#book.count*#book.price" /></td>
+					<td><s:property value="#book.status" /></td>
+					<s:if test="#book.status == '未付款'">
 					<td><s:a action="payOrder"><s:param name="bookId" value="#book.id"/>付款</s:a>
+					</s:if>
 				</tr>
 			</s:iterator>
 		</table>
