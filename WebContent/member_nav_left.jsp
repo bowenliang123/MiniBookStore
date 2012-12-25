@@ -9,7 +9,11 @@
 		<li><s:a action="editMemberProfile_pre">编辑个人信息</s:a></li>
 
 		<li class="nav-header">书城功能</li>
-		<li><s:a action="booklist">查看所有图书</s:a></li>
+		<li><s:a action="viewBooklist">查看所有图书</s:a></li>
+		<li><a href="#"></a></li>
+		
+		<li class="nav-header">订单信息</li>
+		<li><s:a action="viewOrder">查看我的订单</s:a></li>
 		<li><a href="#"></a></li>
 		
 	</ul>

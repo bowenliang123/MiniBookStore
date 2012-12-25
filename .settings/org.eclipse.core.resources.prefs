@@ -2,3 +2,5 @@ eclipse.preferences.version=1
 encoding//WebContent/topbanner.jsp=UTF-8
 encoding//WebContent/welcome.jsp=UTF-8
 encoding//src/lbw/minibookstore/action/Register.java=UTF-8
+encoding//src/lbw/minibookstore/model/BookOrder.java=UTF-8
+encoding//src/lbw/minibookstore/utils/Utils.java=UTF-8

@@ -9,5 +9,7 @@
   <property name="hibernate.connection.username">root</property>
   <mapping class="lbw.minibookstore.model.Account" resource="lbw/minibookstore/model/Account.hbm.xml"/>
   <mapping class="lbw.minibookstore.model.Book" resource="lbw/minibookstore/model/Book.hbm.xml"/>
+  <mapping class="lbw.minibookstore.model.BookOrder" resource="lbw/minibookstore/model/BookOrder.hbm.xml"/>
+  <mapping class="lbw.minibookstore.model.FullOrder" resource="lbw/minibookstore/model/FullOrder.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>
